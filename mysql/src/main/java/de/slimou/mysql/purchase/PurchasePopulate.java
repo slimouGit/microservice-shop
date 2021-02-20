@@ -70,6 +70,9 @@ public class PurchasePopulate implements CommandLineRunner {
         log.info("PRODUCT: {}", pu3.getProduct().getName());
         log.info("CUSTOMER: {}", pu3.getCustomer().getLastname());
 
+        log.info("PRODUCT: {}", pu3.getProduct());
+        log.info("CUSTOMER: {}", pu3.getCustomer());
+
 
 
     }
