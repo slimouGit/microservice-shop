@@ -7,7 +7,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(value = 2)
+@Order(value = 1)
 public class ProductPopulate implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(ProductPopulate.class);
