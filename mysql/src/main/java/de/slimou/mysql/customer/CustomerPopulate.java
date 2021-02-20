@@ -66,8 +66,7 @@ public class CustomerPopulate implements CommandLineRunner {
 
         log.info("--------------------------------");
 
-        log.info("Total amount of customers:");
-//        log.info(this.customerRepository.count() + " customers");
+
     }
 
 
