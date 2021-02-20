@@ -25,6 +25,7 @@ public class ProductPopulate implements CommandLineRunner {
     }
 
     private void workWithProducts() {
+
         log.info("-----------PRODUCT-----------");
         log.info("Products found with findAll():");
         log.info("-------------------------------");

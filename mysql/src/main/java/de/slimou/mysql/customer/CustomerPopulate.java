@@ -60,12 +60,12 @@ public class CustomerPopulate implements CommandLineRunner {
 
         log.info("--------------------------------");
         log.info("Delete all customers:");
-        this.customerRepository.deleteAll();
+//        this.customerRepository.deleteAll();
 
         log.info("--------------------------------");
 
         log.info("Total amount of customers:");
-        log.info(this.customerRepository.count() + " customers");
+//        log.info(this.customerRepository.count() + " customers");
     }
 
 
