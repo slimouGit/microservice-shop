@@ -1,9 +1,6 @@
 package de.slimou.mysql.customer;
 
-import de.slimou.mysql.purchase.Purchase;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "customer")
@@ -19,17 +16,6 @@ public class Customer {
 
     @Column(name = "lastname")
     private String lastname;
-
-    @OneToMany(mappedBy="customer")
-    private List<Purchase> purchases;
-
-    public List<Purchase> getPurchases() {
-        return purchases;
-    }
-
-    public void setPurchases(List<Purchase> purchases) {
-        this.purchases = purchases;
-    }
 
     public Customer() {
     }
