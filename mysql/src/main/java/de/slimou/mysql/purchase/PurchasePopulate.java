@@ -46,10 +46,8 @@ public class PurchasePopulate implements CommandLineRunner {
 
         Customer c2 = this.customerRepository.findById(41L);
         Product p2 = this.productRepository.findById(33L);
-        Purchase pu2 = new Purchase(LocalDate.now(),c2,p2);
+        Purchase pu2 = new Purchase(LocalDate.now(), c2, p2);
         this.purchaseRepository.save(pu2);
-
-
 
 
         workWithOrders();
@@ -74,21 +72,21 @@ public class PurchasePopulate implements CommandLineRunner {
         log.info("CUSTOMER: {}", pu3.getCustomer());
 
         log.info("--------------------------------");
-        for(Purchase p:this.purchaseRepository.findAll()){
-        log.info("PURCHASE: {}", p.getId());
-        log.info("PURCHASE: {}", p.getCustomer().getLastname());
-        log.info("PURCHASE: {}", p.getProduct().getName());
+        for (Purchase p : this.purchaseRepository.findAll()) {
+            log.info("PURCHASE: {}", p.getId());
+            log.info("PURCHASE: {}", p.getCustomer().getLastname());
+            log.info("PURCHASE: {}", p.getProduct().getName());
+        }
 
 
         log.info("--------------------------------");
         log.info("PURCHASE with ID 60");
         Purchase p1 = this.purchaseRepository.findById(60L);
         log.info("date: {}", p1.getTransaction_date());
-            log.info("forname: {}", p1.getCustomer().getFirstname());
-            log.info("lasname: {}", p1.getCustomer().getLastname());
-            log.info("product: {}", p1.getProduct().getName());
-            log.info("price: {}", p1.getProduct().getPrice());
-        }
+        log.info("forname: {}", p1.getCustomer().getFirstname());
+        log.info("lasname: {}", p1.getCustomer().getLastname());
+        log.info("product: {}", p1.getProduct().getName());
+        log.info("price: {}", p1.getProduct().getPrice());
 
     }
 }
