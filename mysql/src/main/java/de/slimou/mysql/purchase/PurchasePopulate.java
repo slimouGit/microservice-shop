@@ -79,6 +79,15 @@ public class PurchasePopulate implements CommandLineRunner {
         log.info("PURCHASE: {}", p.getCustomer().getLastname());
         log.info("PURCHASE: {}", p.getProduct().getName());
 
+
+        log.info("--------------------------------");
+        log.info("PURCHASE with ID 60");
+        Purchase p1 = this.purchaseRepository.findById(60L);
+        log.info("date: {}", p1.getTransaction_date());
+            log.info("forname: {}", p1.getCustomer().getFirstname());
+            log.info("lasname: {}", p1.getCustomer().getLastname());
+            log.info("product: {}", p1.getProduct().getName());
+            log.info("price: {}", p1.getProduct().getPrice());
         }
 
     }
