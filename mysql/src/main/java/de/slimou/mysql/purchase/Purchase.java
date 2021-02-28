@@ -41,7 +41,7 @@ public class Purchase {
         return "Purchase{" +
                 "id=" + id +
                 ", transaction_date=" + transaction_date +
-                ", customer=" + customer +
+                ", domain=" + customer +
                 ", product=" + product +
                 '}';
     }

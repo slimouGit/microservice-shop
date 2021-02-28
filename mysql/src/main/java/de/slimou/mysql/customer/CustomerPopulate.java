@@ -50,7 +50,7 @@ public class CustomerPopulate implements CommandLineRunner {
         log.info(amountCustomers.toString() + " customers");
 
         log.info("--------------------------------");
-        log.info("Delete customer with id 5:");
+        log.info("Delete domain with id 5:");
         if (null != this.customerRepository.findById(5L)) {
             this.customerRepository.deleteById(5L);
         }

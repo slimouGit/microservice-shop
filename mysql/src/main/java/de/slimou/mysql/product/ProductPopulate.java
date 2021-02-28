@@ -29,7 +29,7 @@ public class ProductPopulate implements CommandLineRunner {
         log.info("-----------PRODUCT-----------");
         log.info("Products found with findAll():");
         log.info("-------------------------------");
-        for (Product product: this.productRepository.findAll()) {
+        for (Product product : this.productRepository.findAll()) {
             log.info(product.toString());
         }
         log.info("--------------------------------");
