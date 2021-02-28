@@ -44,8 +44,8 @@ public class PurchasePopulate implements CommandLineRunner {
         pu1.setProduct(p1);
         this.purchaseRepository.save(pu1);
 
-        Customer c2 = this.customerRepository.findById(41L);
-        Product p2 = this.productRepository.findById(33L);
+        Customer c2 = this.customerRepository.findById(288L);
+        Product p2 = this.productRepository.findById(112L);
         Purchase pu2 = new Purchase(LocalDate.now(), c2, p2);
         this.purchaseRepository.save(pu2);
 
@@ -63,7 +63,7 @@ public class PurchasePopulate implements CommandLineRunner {
         log.info("--------------------------------");
         log.info("SEARCHING PURCHASE WITH METADATA");
 
-        Purchase pu3 = this.purchaseRepository.findById(10L);
+        Purchase pu3 = this.purchaseRepository.findById(293L);
         log.info("PURCHASE: {}", pu3.getId());
         log.info("PRODUCT: {}", pu3.getProduct().getName());
         log.info("CUSTOMER: {}", pu3.getCustomer().getLastname());
@@ -81,7 +81,7 @@ public class PurchasePopulate implements CommandLineRunner {
 
         log.info("--------------------------------");
         log.info("PURCHASE with ID 60");
-        Purchase p1 = this.purchaseRepository.findById(60L);
+        Purchase p1 = this.purchaseRepository.findById(293L);
         log.info("date: {}", p1.getTransaction_date());
         log.info("forname: {}", p1.getCustomer().getFirstname());
         log.info("lasname: {}", p1.getCustomer().getLastname());

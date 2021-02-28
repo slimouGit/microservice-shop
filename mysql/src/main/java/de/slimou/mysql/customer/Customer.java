@@ -3,7 +3,7 @@ package de.slimou.mysql.customer;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "domain")
+@Table(name = "customer")
 public class Customer {
 
     @Id
