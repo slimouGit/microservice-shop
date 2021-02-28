@@ -63,30 +63,30 @@ public class PurchasePopulate implements CommandLineRunner {
         log.info("--------------------------------");
         log.info("SEARCHING PURCHASE WITH METADATA");
 
-        Purchase pu3 = this.purchaseRepository.findById(293L);
-        log.info("PURCHASE: {}", pu3.getId());
-        log.info("PRODUCT: {}", pu3.getProduct().getName());
-        log.info("CUSTOMER: {}", pu3.getCustomer().getLastname());
-
-        log.info("PRODUCT: {}", pu3.getProduct());
-        log.info("CUSTOMER: {}", pu3.getCustomer());
-
-        log.info("--------------------------------");
-        for (Purchase p : this.purchaseRepository.findAll()) {
-            log.info("PURCHASE: {}", p.getId());
-            log.info("PURCHASE: {}", p.getCustomer().getLastname());
-            log.info("PURCHASE: {}", p.getProduct().getName());
-        }
-
-
-        log.info("--------------------------------");
-        log.info("PURCHASE with ID 60");
-        Purchase p1 = this.purchaseRepository.findById(293L);
-        log.info("date: {}", p1.getTransaction_date());
-        log.info("forname: {}", p1.getCustomer().getFirstname());
-        log.info("lasname: {}", p1.getCustomer().getLastname());
-        log.info("product: {}", p1.getProduct().getName());
-        log.info("price: {}", p1.getProduct().getPrice());
+//        Purchase pu3 = this.purchaseRepository.findById(293L);
+//        log.info("PURCHASE: {}", pu3.getId());
+//        log.info("PRODUCT: {}", pu3.getProduct().getName());
+//        log.info("CUSTOMER: {}", pu3.getCustomer().getLastname());
+//
+//        log.info("PRODUCT: {}", pu3.getProduct());
+//        log.info("CUSTOMER: {}", pu3.getCustomer());
+//
+//        log.info("--------------------------------");
+//        for (Purchase p : this.purchaseRepository.findAll()) {
+//            log.info("PURCHASE: {}", p.getId());
+//            log.info("PURCHASE: {}", p.getCustomer().getLastname());
+//            log.info("PURCHASE: {}", p.getProduct().getName());
+//        }
+//
+//
+//        log.info("--------------------------------");
+//        log.info("PURCHASE with ID 60");
+//        Purchase p1 = this.purchaseRepository.findById(293L);
+//        log.info("date: {}", p1.getTransaction_date());
+//        log.info("forname: {}", p1.getCustomer().getFirstname());
+//        log.info("lasname: {}", p1.getCustomer().getLastname());
+//        log.info("product: {}", p1.getProduct().getName());
+//        log.info("price: {}", p1.getProduct().getPrice());
 
     }
 }
