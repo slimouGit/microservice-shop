@@ -12,6 +12,8 @@ public class MongoApplication implements CommandLineRunner {
     }
     @Autowired
     private FilmMongoRepository filmMongoRepository;
+    @Autowired
+    private PersonRepository personRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -26,6 +28,10 @@ public class MongoApplication implements CommandLineRunner {
 
 
         this.filmMongoRepository.save(equalizer);
+
+        this.personRepository.save(new Person("Mimi", "Illmi"));
+
+
 
 
     }
