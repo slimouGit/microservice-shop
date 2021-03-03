@@ -14,12 +14,20 @@ public class Film {
 	private final String title;
 	
 	private final Integer releaseYear;
+
+	private Actor actor;
 	
 	private final List<Actor> actors = new ArrayList<>();
 
 	public Film(String title, Integer releaseYear) {
 		this.title = title;
 		this.releaseYear = releaseYear;
+	}
+
+	public Film(String title, Integer releaseYear, Actor actor) {
+		this.title = title;
+		this.releaseYear = releaseYear;
+		this.actor = actor;
 	}
 
 	public String getId() {
@@ -37,4 +45,6 @@ public class Film {
 	public List<Actor> getActors() {
 		return Collections.unmodifiableList(actors);
 	}
+
+
 }
