@@ -21,7 +21,14 @@ public class CustomerPopulate implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Customer salim = new Customer("Salim", "Oussayfi");
         insertCustomer(salim);
+        deleteCustomer(369);
+
+        Customer mimi = new Customer("Michaela Maria","Illmer");
+        insertCustomer(mimi);
+
     }
+
+
 
     private void insertCustomer(Customer customer) {
         {
@@ -29,6 +36,13 @@ public class CustomerPopulate implements CommandLineRunner {
             this.jdbcTemplate.update("INSERT INTO Customer (firstname, lastname) VALUES (?,?)", args);
         }
     }
+
+    private void deleteCustomer(int id) {
+        {
+            this.jdbcTemplate.update("DELETE FROM Customer WHERE id =" + id);
+        }
+    }
+
 
 
 }
