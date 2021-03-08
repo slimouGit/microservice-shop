@@ -37,7 +37,11 @@ public class PersonPopulate implements CommandLineRunner {
         List<Person> personListByNameAndBirthday = this.personService.findByNameAndBirthday("Mimi", "Illmi", LocalDate.of(1976,3,6));
 
         personListByNameAndBirthday.addAll(this.personService.findByNameAndBirthday("Salim", "Oussayfi", LocalDate.of(1980,4,26)));
+        personListByNameAndBirthday.addAll(this.personService.findByNameAndBirthday("Max", "Mustermann", LocalDate.of(1980,4,26)));
 
         log.info("Personen nach Name und Geburtsdatum {}", personListByNameAndBirthday.size());
+        for(Person person:personListByNameAndBirthday){
+            log.info("Person {} {} {}", person.getFirstname(), person.getLastname(), person.getBirthday() );
+        }
     }
 }

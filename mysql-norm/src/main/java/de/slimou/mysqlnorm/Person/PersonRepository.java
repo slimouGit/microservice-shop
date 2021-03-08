@@ -17,6 +17,13 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
     @Query("SELECT p FROM Person p WHERE p.firstname = :firstname AND p.lastname = :lastname")
     List<Person> findByName(@Param("firstname") String firstname, @Param("lastname") String lastname);
 
+    /**
+     * Person anhand Vor- und Zuname und Geburtsdatum suchen
+     * @param firstname
+     * @param lastname
+     * @param birthday
+     * @return
+     */
     @Query("SELECT p FROM Person p WHERE p.firstname = :firstname AND p.lastname = :lastname AND p.birthday = :birthday")
     List<Person> findByNameAndBirthday(@Param("firstname") String firstname, @Param("lastname") String lastname, @Param("birthday") LocalDate birthday);
 
